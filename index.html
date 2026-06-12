@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Taskora 🚀</title>
+
+  <!-- PWA -->
+  <link rel="manifest" href="manifest.json">
+  <meta name="theme-color" content="#6366f1">
+
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div class="app">
+
+  <header>
+    <h1>🚀 Taskora</h1>
+    <p>Your Smart Productivity App</p>
+
+    <button onclick="toggleTheme()">🌙 Theme</button>
+  </header>
+
+  <section class="inputBox">
+    <input type="text" id="taskInput" placeholder="Enter your task...">
+    <button onclick="addTask()">Add</button>
+  </section>
+
+  <ul id="taskList"></ul>
+
+</div>
+
+<script src="script.js"></script>
+
+<!-- Service Worker -->
+<script>
+if ("serviceWorker" in navigator) {
+  navigator.serviceWorker.register("service-worker.js");
+}
+</script>
+
+</body>
+</html>
